@@ -79,6 +79,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "nix"
+version = "0.25.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f346ff70e7dbfd675fe90590b92d59ef2de15a8779ae305ebcbfd3f0caf59be4"
+dependencies = [
+ "autocfg",
+ "bitflags",
+ "cfg-if",
+ "libc",
+]
+
+[[package]]
 name = "num_cpus"
 version = "1.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -132,6 +144,7 @@ version = "0.1.0"
 dependencies = [
  "bytes",
  "tokio",
+ "tokio-tun",
 ]
 
 [[package]]
@@ -223,6 +236,17 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "tokio-tun"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "81a58c25419e04418da41729d0896be7c98f3d4fcb08fbd6100f9a5ad4e9899a"
+dependencies = [
+ "libc",
+ "nix",
+ "tokio",
 ]
 
 [[package]]
